@@ -14,11 +14,10 @@ addMethod('load', function (args, argc) {
     this.call('run', queue);
 });
 
-function asyncLoadScript(src) {
+function asyncLoadScript(options) {
     return function (onload, onerror) {
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = src;
         script.onload = onload;
         script.onerror = onerror;
         script.onreadystatechange = function () {
@@ -28,6 +27,16 @@ function asyncLoadScript(src) {
                 onload();
             }
         };
+
+        if (typeof options === "string") {
+            script.src = options;
+        } else {
+            for (var name in options) {
+                if (options.hasOwnProperty(name))
+                    script.setAttribute(name, options[name])
+            }
+        }
+
         head.insertBefore(script, head.firstChild);
     }
 }
