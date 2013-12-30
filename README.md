@@ -34,6 +34,20 @@ load('myscript2.js').onError(function (err) {
 });
 ```
 
+### Example 4
+
+Load script with custom attributes
+
+```javascript
+load({src: 'jquery.js'}) // similar to load('jquery.js')
+
+load({
+    'src': 'dropbox.js',
+    'api-key' : 'API_KEY'
+})
+// will load <script src="dropbox.js" api-key="API_KEY" ...
+```
+
 **For more examples of the available methods, see the [chain.js](https://github.com/chriso/chain.js) page**
 
 ## Contributors
