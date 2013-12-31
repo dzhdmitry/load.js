@@ -1,4 +1,4 @@
-describe("Load", function(){
+describe("Load", function() {
   var flag;
 
   beforeEach(function() {
@@ -24,7 +24,7 @@ describe("Load", function(){
     });
   });
 
-  it("should load sample file using path", function(){
+  it("should load sample file using path", function() {
     runs(function() {
       load('spec/helpers/sample.js').thenRun(function() {
         flag = true;
@@ -39,7 +39,7 @@ describe("Load", function(){
     });
   });
 
-  it("should load file with custom attributes", function(){
+  it("should load file with custom attributes", function() {
     runs(function() {
       load({src: 'custom.js', id: 'custom_js'}).thenRun(function() {
         flag = true;
