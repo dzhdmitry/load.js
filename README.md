@@ -2,7 +2,7 @@
 
 Built on top of [chain.js](https://github.com/chriso/chain.js), it allows you to lazy load your JS scripts sequentially or in parallel and handle complex dependency chains.
 
-## Example
+### Example
 
 ```javascript
 load('jquery.js').then('jquery-ui.js', 'jquery-ui-theme.js').then('myscript.js').thenRun(function () {
@@ -18,7 +18,7 @@ load('underscore.js');
 - once *jQuery* has loaded, *jquery-ui.js* and *jquery-ui-theme.js* are loaded in parallel. When both are complete, *myscript.js* is loaded
 - each chain is separate, so *underscore* and *jQuery* will load in parallel
 
-## Example 2
+### Example 2
 
 Load a script after a 0.5s delay
 

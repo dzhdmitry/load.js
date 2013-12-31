@@ -1,1 +1,1 @@
-var helpers_sample = 'helpers/sample.js executed'
+var helpers_sample = 'helpers/sample.js executed';

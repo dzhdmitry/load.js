@@ -1,1 +1,1 @@
-var sample = 'Sample.js executed'
+var sample = 'sample.js executed';
